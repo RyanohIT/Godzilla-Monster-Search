@@ -1,0 +1,51 @@
+body{
+    background-image: url(godzilla.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.calendar{
+    margin: auto;
+    max-width: 800px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.month{
+    text-align: center;
+    background: teal;
+    font-size: 80px;
+    letter-spacing: 1px;
+    color:blue;
+    border: 2px solid red;
+}
+
+table, th, td{
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-size: 27px;
+    border-collapse: collapse;
+    border: 5px solid black;
+    font-family: Elaphant;
+}
+
+tr, th, td{
+    padding: 15px;
+}
+
+th{
+    background: blue;
+    color: aqua;
+    font-family: arial black;
+} 
+
+td{
+    background: blueviolet;
+    color: black;
+}
+
+td:hover{
+    background: blueviolet;
+}
