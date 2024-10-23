@@ -26,6 +26,40 @@
                 <img src="/img/MonarchSymbol.jpg" width="50px" height="70px">
                 <figcaption>Last Bastion of Hope</figcaption>
             </figure>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<ul id="myUL">
+  <li><a href="#">Godzilla</a></li>
+  <li><a href="#">Anguirus</a></li>
+  <li><a href="#">Giant Lizard</a></li>
+  <li><a href="#">Giant Octopus</a></li>
+  <li><a href="#">King Kong</a></li>
+  <li><a href="#">Mothra</a></li>
+  <li><a href="#">Mystery Bones of Infant Island</a></li>
+  <li><a href="#">Rodan</a></li>
+  <li><a href="#">King Ghidorah</a></li>
+  <li><a href="#">Ebirah</a></li>
+  <li><a href="#">Giant Condor</a></li>
+  <li><a href="#">Giant Eagle</a></li>
+  <li><a href="#">Giant Praying Mantis</a></li>
+  <li><a href="#">Kamacuras</a></li>
+  <li><a href="#">Minilla</a></li>
+  <li><a href="#">Kumonga</a></li>
+  <li><a href="#">Manda</a></li>
+  <li><a href="#">Gorosaurus</a></li>
+  <li><a href="#">Baragon</a></li>
+  <li><a href="#">Varan</a></li>
+  <li><a href="#">Gabara</a></li>
+  <li><a href="#">Maneater</a></li>
+  <li><a href="#">Hedorah</a></li>
+  <li><a href="#">Gigan</a></li>
+  <li><a href="#">Jet Jaguar</a></li>
+  <li><a href="#">Megalon</a></li>
+  <li><a href="#">Mechagodzilla</a></li>
+  <li><a href="#">King Caesar</a></li>
+  <li><a href="#">Titanosaurus</a></li>
+
+</ul>
         </main>
         <footer>
             <iframe width="780" height="439" src="https://www.youtube.com/embed/VIbIkY&t=1s" title="Monarch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
