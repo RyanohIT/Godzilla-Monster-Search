@@ -1,3 +1,16 @@
+function displayTime() {
+    let specificTime = new Date();
+    specificTime.setHours(23); 
+    specificTime.setMinutes(0);
+    specificTime.setSeconds(0);
+
+    
+    let hours = specificTime.getHours().toString().padStart(2, '0');
+    let minutes = specificTime.getMinutes().toString().padStart(2, '0');
+    let seconds = specificTime.getSeconds().toString().padStart(2, '0');
+
+    document.getElementById('clock').innerText = `${hours}:${minutes}:${seconds}`;
+}
 document.addEventListener('DOMContentLoaded', function() {
     const prev = document.querySelector('.prev');
     const next = document.querySelector('.next');

@@ -1,5 +1,20 @@
-body{
-    background-image: url(godzilla.jpg);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f15e08;
+    color: rgb(88, 72, 148);
+    font-family: 'Arial', sans-serif;
+}
+
+#clock {
+    text-align: center;
+    font-size: 3em;
+}
+
+body {
+    background-image: ("godzilla.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

@@ -1,5 +1,5 @@
 #myInput {
-    background-image: url('/css/godzilla search icon.jfif'); 
+    background-image: ("downloads/GodzillaSearchIcon.jpg"); 
     background-position: 10px 12px; 
     background-repeat: no-repeat; 
     width: 100%; 
@@ -27,5 +27,5 @@
   }
   
   #myUL li a:hover:not(.header) {
-    background-color: #eee; 
+    background-color: #0a0909; 
   }

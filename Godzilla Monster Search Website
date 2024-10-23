@@ -23,7 +23,7 @@
             <h1>Search for Monsters</h1>
             <p>Know your enemy to be prepared.
             <figure>
-                <img src="/img/MonarchSymbol.jpg" width="50px" height="70px">
+                <img src="downloads/MonarchSymbol.jpg" alt="MonarchSymbol" width="50px" height="70px">
                 <figcaption>Last Bastion of Hope</figcaption>
             </figure>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
