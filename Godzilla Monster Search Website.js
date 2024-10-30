@@ -17,3 +17,10 @@ function myFunction() {
   }
 }
 </script>
+mw.hook('dev.fetch').add(function (fetch) {
+  // your code here
+});
+importArticle({
+  type: 'script',
+  article: 'u:dev:MediaWiki:Fetch.js'
+});
