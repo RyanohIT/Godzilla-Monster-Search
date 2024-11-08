@@ -40,15 +40,6 @@ class FormValidator {
     } else {
       this.setStatus(field, null, "success");
     }
-
-    // check for a valid email address
-    if (field.type === "email") {
-      const re = /\S+@\S+\.\S+/;
-      if (re.test(field.value)) {
-        this.setStatus(field, null, "success");
-      } else {
-        this.setStatus(field, "Please enter valid email address", "error");
-      }
     }
 
     // Password confirmation edge case
@@ -87,7 +78,7 @@ class FormValidator {
 
 
 const form = document.querySelector('.form');
-const fields = ["username", "email", "password", "password_confirmation"];
+const fields = ["username", "password"];
 
 const validator = new FormValidator(form, fields);
 validator.initialize();
