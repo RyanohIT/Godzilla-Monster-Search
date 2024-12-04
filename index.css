@@ -12,8 +12,6 @@ nav {
 ul {
   display: inline-block;
   padding: 25px;
-  border: thick double;
-  border-color: rgb(34, 37, 77);
   border-spacing: 5px;
   list-style-type: none;
   font-size: 25px;
@@ -24,7 +22,7 @@ ul {
 
 li {
   padding-left: 2rem;
-  background-image: url("chibigodzilla.jpg");
+  background-image: url("monarchhq.jpg");
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
@@ -55,7 +53,7 @@ li {
 }
 
 header {
-  background-color: white;
+  background-image: linear-gradient(white, black);
 }
 
 body {
@@ -169,10 +167,9 @@ main {
   position: relative;
 }
 
-.error-message {
+.errormessage {
   font-size: 0.85rem;
   color: red;
-  display: none;
 }
 
 .button {
@@ -207,4 +204,5 @@ main {
 .promo a {
   color: red;
 }
+
 

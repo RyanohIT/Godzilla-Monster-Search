@@ -31,26 +31,10 @@
     font-weight: bold;
   }
   
-  li {
+  .list {
+    margin: 5px;
     padding-left: 2rem;
     background-image: url("godzillaskybeam.jpg");
-    background-position: 0 0;
-    background-size: 1.6rem 1.6rem;
-    background-repeat: no-repeat;
-    margin-bottom: 10px;
-  }
-  
-  li {
-    padding-left: 2rem;
-    background-position: 0 0;
-    background-size: 1.6rem 1.6rem;
-    background-repeat: no-repeat;
-    margin-bottom: 10px;
-  
-  }
-  
-  li {
-    padding-left: 2rem;
     background-position: 0 0;
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;
@@ -89,47 +73,109 @@
     border: solid black;
   }
   
-  .container {
-    align-items: center;
+  section {
     display: flex;
     height: 100%;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 600px;
-    width: 100%;
+    min-height: 100%;
+    justify-content: right;
+    align-items: center;
+    font-size: 12px;
+    background-color: rgb(67, 7, 124);
+    color: white;
+    padding: 15px;
+    margin: 15px;
   }
   
+  .countdown-container {
+    display: flex;
+    width: 100%;
+    max-width: 97%;
+    justify-content: space-between;
+  }
+  
+  .years-container,
+  .days-container,
+  .hours-container,
+  .minutes-container, 
+  .seconds-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.1);
+    border: 5px solid rgba(255,255,255,0.3);
+    width: 140px;
+    height: 140px;
+    border-radius: 99px;
+  }
+  
+  .years,
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: 4em; 
+    margin: 10px 0;
+  }
+  
+  .years-label,
+  .days-label,
+  .hours-label,
+  .minutes-label,
+  .seconds-label {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 800px) {
+    
+    .countdown-container {
+      max-width: 90%;
+    }
+    
+    .years-container,
+    .days-container,
+    .hours-container,
+    .minutes-container, 
+    .seconds-container {
+      font-size: 0.8em;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
   .calendar {
-    background: #2b4450;
+    background-color: rgb(67, 7, 124);
     border-radius: 4px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
     height: 501px;
     perspective: 1000;
     transition: .9s;
     transform-style: preserve-3d;
-    width: 100%;
+    width: 97%;
+    margin: 15px;
   }
-  
+
   /* Front - Calendar */
   .front {
     transform: rotateY(0deg);
   }
   
   .current-date {
-    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    border-bottom: 1px solid white;
     display: flex;
     justify-content: space-between;
     padding: 30px 40px;
   }
   
   .current-date h1 {
-    color: #dfebed;
+    color: white;
     font-size: 1.4em;
     font-weight: 300;
   }
   
   .week-days {
-    color: #dfebed;
+    color: white;
     display: flex;
     justify-content: space-between;
     font-weight: 600;
@@ -143,7 +189,7 @@
   }
   
   .weeks {
-    color: #fff;
+    color: white;
     display: flex;
     flex-direction: column;
     padding: 0 40px;
@@ -158,7 +204,7 @@
     width: 100%;
   }
   
-  .last-month {
+  .next-month {
     opacity: .3;
   }
   
@@ -167,7 +213,7 @@
   }
   
   .weeks span.active {
-    background: #f78536;
+    background: red;
     border-radius: 50%;
   }
   
@@ -182,7 +228,7 @@
   
   .event:after {
     content: '•';
-    color: #f78536;
+    color: red;
     font-size: 1.4em;
     position: absolute;
     right: -4px;
@@ -200,7 +246,7 @@
     background: none;
     border: none;
     border-bottom: 1px solid rgba(73, 114, 133, .6);
-    color: #dfebed;
+    color: black;
     font-size: 1.4em;
     font-weight: 300;
     padding: 30px 40px;
@@ -208,7 +254,7 @@
   }
   
   .info {
-    color: #dfebed;
+    color: black;
     display: flex;
     flex-direction: column;
     font-weight: 600;
@@ -249,7 +295,7 @@
   .actions button {
     background: none;
     border: 0;
-    color: #fff;
+    color: black;
     font-weight: 600;
     letter-spacing: 3px;
     margin: 0;
@@ -280,4 +326,11 @@
   
   .front, .back {
     backface-visibility: hidden;
+  }
+
+  footer {
+   display: flex;
+   background-image: linear-gradient(white, black);
+   justify-content: center;
+   align-items: center;
   }
