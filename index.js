@@ -1,83 +1,32 @@
-class FormValidator {
-    constructor(form, fields) {
-      this.form = form;
-      this.fields = fields;
-    }
-  
-    initialize() {
-      this.validateOnEntry();
-      this.validateOnSubmit();
-    }
-  
-    validateOnSubmit() {
-      let self = this;
-  
-    
-      this.form.addEventListener("submit", e => {
-        e.preventDefault();
-        self.fields.forEach(field => {
-          const input = document.querySelector(`#${field}`);
-          self.validateFields(input);
-        });
-      });
+document.getElementById("loginForm").addEventListener("submit", (event) => {
+    event.preventDefault();
 
-      
+    let errorExists = false;
+
+    const passwordField = document.getElementById("password");
+    const usernameField = document.getElementById("username");
+
+    if (passwordField.value !== "Godzilla") {
+        document.getElementById("errormessage").classList.add("show");
+        alert("Please Input Correct Monarch Credentials");
+
+        errorExists = true;
+    } else {
+        document.getElementById("errormessage").classList.remove("show");
     }
-  
-    validateOnEntry() {
-      let self = this;
-      this.fields.forEach(field => {
-        const input = document.querySelector(`#${field}`);
-  
-        input.addEventListener("input", event => {
-          self.validateFields(input);
-        });
-      });
+
+    if (usernameField.value !== "Monarch") {
+        document.getElementById("error-message").classList.add("show");
+        alert("Please Input Correct Monarch Credentials");
+
+        errorExists = true;
+    } else {
+        document.getElementById("error-message").classList.remove("show");
     }
-  
-    validateFields(field) {
-      // Check presence of values
-      if (field.value.trim() === "") {
-        this.setStatus(
-        field,
-        `${field.previousElementSibling.innerText} cannot be blank`,
-        "error");
-  
-      } else {
-        this.setStatus(field, null, "success");
-      }
-  
+
+    if (errorExists === false) {
+        window.location.href= "http://127.0.0.1:5500/godzillamonstersearch.html"
+        alert('Proceed With Caution!')
+        console.log("Login Success!");
     }
-  
-    setStatus(field, message, status) {
-      const successIcon = field.parentElement.querySelector(".icon-success");
-      const errorIcon = field.parentElement.querySelector(".icon-error");
-      const errorMessage = field.parentElement.querySelector(".error-message");
-  
-      if (status === "success") {
-        if (errorIcon) {
-          errorIcon.classList.add("hidden");
-        }
-        if (errorMessage) {
-          errorMessage.innerText = "";
-        }
-        successIcon.classList.remove("hidden");
-        field.classList.remove("input-error");
-      }
-  
-      if (status === "error") {
-        if (successIcon) {
-          successIcon.classList.add("hidden");
-        }
-        field.parentElement.querySelector(".error-message").innerText = message;
-        errorIcon.classList.remove("hidden");
-        field.classList.add("input-error");
-      }
-    }}
-  
-  
-  const form = document.querySelector(".form");
-  const fields = ["username", "password"];
-  
-  const validator = new FormValidator(form, fields);
-  validator.initialize();
+});

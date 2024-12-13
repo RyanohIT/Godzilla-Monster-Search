@@ -12,13 +12,7 @@
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="godzillamonstersearch.html">Godzilla Monster Search Website</a></li>
-                <li><a href="doomsdaycountdown.html">Doomsday Countdown</a></li>
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </nav>
+       
     </header>
 
     <main>
@@ -28,8 +22,8 @@
             <form action="#" class="form" id="loginForm">
                 <div class="input-group">
                     <label for="username" class="label">Username</label>
-                    <input id="username" placeholder="Monarch Login" type="text" class="input">
-                    <span class="error-message"></span>
+                    <input id="username" placeholder="Monarch Login" type="text" class="input" required>
+                    <span id="error-message"></span>
                     <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                         fill="currentColor">
                         <path fill-rule="evenodd"
@@ -47,8 +41,8 @@
 
                 <div class="input-group">
                     <label for="password" class="label">Password</label>
-                    <input id="password" placeholder="Monarch Password" type="password" class="input">
-                    <span class="error-message"></span>
+                    <input id="password" placeholder="Monarch Password" type="password" class="input" required>
+                    <span id="errormessage"></span>
                     <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                         fill="currentColor">
                         <path fill-rule="evenodd"
@@ -74,9 +68,7 @@
                 href="https://www.youtube.com/watch?v=lV1OOlGwExM&t=1s" target="_blank">here</a> or <a
                 href="https://www.youtube.com/watch?v=JLHsM4bpfxY">here</a> </div>
 
-        <audio controls autoplay loop>
-         <source src="Rolling-Sound.wav" type="audio/wav">
-        </audio>
+        
     </footer>
     <script src="index.js"></script>
 </body>

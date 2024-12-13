@@ -100,22 +100,22 @@ img {
 
 /* Column widths are based on these cells */
 
-.row-monsters {
+.row-1 {
    width:20%;
 }
-.row-dom {
+.row-2 {
   width: 20%;
 }
 
-.row-int {
+.row-3 {
   width: 20%;
 }
 
-.row-gross {
+.row-4 {
   width: 20%;
 }
 
-.row-year {
+.row-5 {
   width: 20%;
 }
 

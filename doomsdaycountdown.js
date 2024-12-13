@@ -1,11 +1,48 @@
+// Set the target date and time for the countdown
+const targetDate = new Date("2027-03-26 18:35:00").getTime();
+
+// Update the countdown every second
+const countdownInterval = setInterval(() => {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the time difference between the current date/time and the target date/time
+  const timeDifference = targetDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365));
+  const months = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+  const weeks = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24 * 7));
+  const days = Math.floor(timeDifference % (1000 * 60 * 60 * 24 * 30) / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(timeDifference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+  const minutes = Math.floor(timeDifference % (1000 * 60 * 60) / (1000 * 60));
+  const seconds = Math.floor(timeDifference % (1000 * 60) / (1000));
+
+  // Display the calculated time in the HTML elements
+  document.getElementById("years").textContent = years;
+  document.getElementById("months").textContent = months;
+  document.getElementById("countdown-weeks").textContent = weeks;
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  // Check if the countdown has expired
+  if (timeDifference < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("countdown-container").innerHTML = "Doomsday";
+    window.location.href = 'https://www.google.com/maps?q=2sTOHO%20Cinemas%20Nihonbashi';
+  }
+}, 1000);
+
 var app = {
   settings: {
-    container: $('.calendar'),
-    calendar: $('.front'),
-    days: $('.weeks span'),
-    form: $('.back'),
-    input: $('.back input'),
-    buttons: $('.back button')
+    container: (".calendar"),
+    calendar: (".front"),
+    days: (".active"),
+    form: (".back"),
+    input: (".back input"),
+    buttons: (".back button")
   },
 
   init: function() {
@@ -15,7 +52,7 @@ var app = {
   },
 
   swap: function(currentSide, desiredSide) {
-    settings.container.toggleClass('flip');
+    settings.container.toggleClass("flip");
 
     currentSide.fadeOut(900);
     currentSide.hide();
@@ -24,77 +61,15 @@ var app = {
   },
 
   bindUIActions: function() {
-    settings.days.on('click', function(){
+    settings.days.on("click", function(){
       instance.swap(settings.calendar, settings.form);
       settings.input.focus();
     });
 
-    settings.buttons.on('click', function(){
+    settings.buttons.on("click", function(){
       instance.swap(settings.form, settings.calendar);
     });
   }
 }
 
 app.init();
-
-const countDownClock = (number = 100, format = 'seconds') => {
-
-  const d = document;
-  const yearsElement = d.querySelector('years');
-  const daysElement = d.querySelector('.days');
-  const hoursElement = d.querySelector('.hours');
-  const minutesElement = d.querySelector('.minutes');
-  const secondsElement = d.querySelector('.seconds');
-  let countdown;
-  convertFormat(format);
-
-
-  function convertFormat(format) {
-    switch (format) {
-      case 'seconds':
-        return timer(number);
-      case 'minutes':
-        return timer(number * 60);
-      case 'hours':
-        return timer(number * 60 * 60);
-      case 'days':
-        return timer(number * 60 * 60 * 24);
-      case 'years':
-        return timer(number * 60 *60 * 24 * 365)}
-
-  }
-
-  function timer(seconds) {
-    const now = Date.now();
-    const then = now + seconds * 1000;
-
-    countdown = setInterval(() => {
-      const secondsLeft = Math.round((then - Date.now()) / 1000);
-
-      if (secondsLeft <= 0) {
-        clearInterval(countdown);
-        alert('Doomsday Has Arrived');
-        return;
-      };
-
-      displayTimeLeft(secondsLeft);
-
-    }, 1000);
-  }
-
-  function displayTimeLeft(seconds) {
-    yearsElement.textContent = Math.floor(seconds / 31536000)
-    daysElement.textContent = Math.floor(seconds / 86400);
-    hoursElement.textContent = Math.floor(seconds % 86400 / 3600);
-    minutesElement.textContent = Math.floor(seconds % 86400 % 3600 / 60);
-    secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
-  }
-};
-
-
-/*
-  start countdown
-  enter number and format
-  days, hours, minutes or seconds
-*/
-countDownClock(834, 'days');

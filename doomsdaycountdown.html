@@ -36,27 +36,37 @@
        <section class="countdown-container">
 
         <div class="years-container">
-          <div class="years"></div>
+          <div class="years" id="years"></div>
           <div class="years-label">Years</div>
+        </div>
+
+        <div class="months-container">
+          <div class="months" id="months"></div>
+          <div class="months-label">Months</div>
+        </div>
+
+        <div class="weeks-container">
+          <div class="countdown-weeks" id="countdown-weeks"></div>
+          <div class="weeks-label">Weeks</div>
         </div>
   
         <div class="days-container">
-          <div class="days"></div>
+          <div class="days" id="days"></div>
           <div class="days-label">Days</div>
         </div>
         
         <div class="hours-container">
-          <div class="hours"></div>
+          <div class="hours" id="hours"></div>
           <div class="hours-label">Hours</div>
         </div>
         
         <div class="minutes-container">
-          <div class="minutes"></div>
+          <div class="minutes" id="minutes"></div>
           <div class="minutes-label">Minutes</div>
         </div>
         
         <div class="seconds-container">
-          <div class="seconds"></div>
+          <div class="seconds" id="seconds"></div>
           <div class="seconds-label">Seconds</div>
         </div>
         
@@ -151,7 +161,7 @@
               </div>
               <div class="address">
                 <p>
-                  Address: <span>103-0022Chuo2-3-1 Nihombashi-muromachi, Coredo Muromachi 2, 3F</span>
+                  Address: <span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21801.454821502273!2d139.7576971260752!3d35.681787218806626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188955af30ed01%3A0xcaf08d311369e3ba!2sTOHO%20Cinemas%20Nihonbashi!5e0!3m2!1sen!2sus!4v1733418637889!5m2!1sen!2sus" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
                 </p>
               </div>
               <div class="observations">
@@ -163,10 +173,11 @@
   
             <div class="actions">
               <button class="save">
-                Save <i class="ion-checkmark"></i>
+                <a noopener href="https://www.google.com/maps?q=2sTOHO%20Cinemas%20Nihonbashi" target="_blank">Doomsday Epicenter</a> <i class="ion-checkmark"></i>
+                
               </button>
               <button class="dismiss">
-                Dismiss <i class="ion-android-close"></i>
+                Safety <i class="ion-android-close"></i>
               </button>
             </div>
           </div>
@@ -175,12 +186,15 @@
       </div>
              </main>
     <footer>
-      <audio controls loop>
+      <audio controls autoplay loop>
         <source src="Godzilla-Growl.wav" type="audio/wav">
       </audio>
        
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="doomsdaycountdown.js"></script>
+  
 </body>
+
 
 </html>

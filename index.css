@@ -9,49 +9,6 @@ nav {
   justify-content: center;
 }
 
-ul {
-  display: inline-block;
-  padding: 25px;
-  border-spacing: 5px;
-  list-style-type: none;
-  font-size: 25px;
-  padding-left: 25px;
-  font-style: italic;
-  font-weight: bold;
-}
-
-li {
-  padding-left: 2rem;
-  background-image: url("monarchhq.jpg");
-  background-position: 0 0;
-  background-size: 1.6rem 1.6rem;
-  background-repeat: no-repeat;
-  border: thick double;
-  border-color: rgb(34, 37, 77);
-  margin-bottom: 10px;
-}
-
-li {
-  padding-left: 2rem;
-  background-position: 0 0;
-  background-size: 1.6rem 1.6rem;
-  background-repeat: no-repeat;
-  border: thick double;
-  border-color: rgb(34, 37, 77);
-  margin-bottom: 10px;
-
-}
-
-li {
-  padding-left: 2rem;
-  background-position: 0 0;
-  background-size: 1.6rem 1.6rem;
-  background-repeat: no-repeat;
-  border: thick double;
-  border-color: rgb(34, 37, 77);
-  margin-bottom: 10px;
-}
-
 header {
   background-image: linear-gradient(white, black);
 }
