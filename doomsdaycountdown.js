@@ -37,12 +37,12 @@ const countdownInterval = setInterval(() => {
 
 var app = {
   settings: {
-    container: (".calendar"),
-    calendar: (".front"),
-    days: (".active"),
-    form: (".back"),
-    input: (".back input"),
-    buttons: (".back button")
+    container: $(".calendar"),
+    calendar: $(".front"),
+    days: $(".active"),
+    form: $(".back"),
+    input: $(".back input"),
+    buttons: $(".back button")
   },
 
   init: function() {

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-    
+
         <nav>
             <ul>
                 <li><a href="">Godzilla Monster Search Website</a></li>
@@ -20,23 +20,34 @@
         </nav>
     </header>
     <main>
-       
+
         <div class="hero-image">
             <img src="godzillas.jpg" alt="godzillas">
         </div>
-    
+
         <div class="hero-image2">
             <img alt="godzillaskybeam" src="godzillaskybeam.jpg">
         </div>
         <div class="container">
-        <form action="/search" method="GET">
-            <label for="search">Search for Monsters:</label>
-            <input type="search" id="search" name="q" placeholder="Search for a Monster" required aria-label="Search for Godzilla Monsters">
-            <button type="submit">Search</button>
-            <span class="validity"></span>
-          </form>
+            <form id="myForm" class="search-form js-search-form" action="/search" method="GET">
+                <label for="search">Search for Monsters:</label>
+                <input type="search" id="searchInput" name="q" class="search-input js-search-input"
+                    placeholder="Search for a Monster" required aria-label="Search for Godzilla Monsters" autofocus>
+                <button type="submit">Search</button>
+                <span class="validity"></span>
+            </form>
+            <div class="loading-indicator">
+                <div class="sk-chase js-spinner hidden">
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                </div>
+              </div>
         </div>
-
+        <section class="search-results js-search-results"></section>
         <div class="hero-image3">
             <img alt="godzillaskyline" src="godzillascape.jpg">
         </div>
@@ -44,9 +55,9 @@
     <footer>
         <audio controls autoplay loop>
             <source src="Godzilla-Growl.wav" type="audio/wav">
-          </audio>
+        </audio>
     </footer>
-    <script src ="godzillamonstersearch.js"></script>
+    <script src="godzillamonstersearch.js"></script>
 </body>
 
 </html>
